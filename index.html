@@ -1,1 +1,57 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CodeMirror主文件 -->
+    <link rel="stylesheet" href="/lib/codemirror-5.59.1/lib/codemirror.css">
+    <script src="/lib/codemirror-5.59.1/lib/codemirror.js"></script>
+    <script src="/lib/codemirror-5.59.1/addon/mode/simple.js"></script>
+    <!-- 滚动条 -->
+    <link rel="stylesheet" href="/lib/codemirror-5.59.1/addon/scroll/simplescrollbars.css">
+    <script src="/lib/codemirror-5.59.1/addon/scroll/simplescrollbars.js"></script>
+    <script src="/lib/codemirror-5.59.1/addon/scroll/annotatescrollbar.js"></script>
+    <!-- 主题样式 -->
+    <link rel="stylesheet" href="/lib/codemirror-5.59.1/theme/dracula.css">
+    <!-- 代码样式 -->
+    <script src="/lib/codemirror-5.59.1/mode/clike/clike.js"></script>
+    <script src="/lib/codemirror-5.59.1/mode/rust/rust.js"></script>
+    <!-- 闭合括号 -->
+    <script src="/lib/codemirror-5.59.1/addon/edit/closebrackets.js"></script>
+    <!-- 当前行高亮显示 -->
+    <script src="/lib/codemirror-5.59.1/addon/selection/active-line.js"></script>
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/editor.css">
+    <link rel="stylesheet" href="/css/operations.css">
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="editors">
+            <div class="left-editor">
+                <div class="editor-head">C source code</div>
+                <textarea name="textarea_c" id="textarea_c" cols="30" rows="10"></textarea>
+            </div>
+            <div class="right-editor">
+                <div class="editor-head">Generated Rust source code</div>
+                <textarea name="textarea_rust" id="textarea_rust" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="operations">
+            <button id="transcode_btn">转译</button>
+            <button id="compile_verify_btn"><del>编译/校验</del></button>
+            <button id="sample_btn">展示示例</button>
+            <div>
+                <del>转译工具：</del>
+                <select id="tool_select">
+                    <option value="c2rust">C2Rust</option>
+                    <option value="corrode">corrode</option>
+                    <option value="crust">crust</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
