@@ -1,5 +1,5 @@
 const API_DEV = "";
-const API_ONLINE = "https://dev.opencamp.cn:24311";
+const API_ONLINE = "https://dev.opencamp.cn/c2rust:24311";
 
 function setNewEditor(language, selector, val='') {
     const elem = document.querySelector(selector);
