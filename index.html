@@ -32,16 +32,26 @@
             <div class="left-editor">
                 <div class="editor-head">C source code</div>
                 <textarea name="textarea_c" id="textarea_c" cols="30" rows="10"></textarea>
+                <div id="c_output" class="output"></div>
+                <button id="c_run_btn" class="run-btn">运行</button>
             </div>
             <div class="right-editor">
                 <div class="editor-head">Generated Rust source code</div>
                 <textarea name="textarea_rust" id="textarea_rust" cols="30" rows="10"></textarea>
+                <div id="rust_output" class="output"></div>
+                <button id="rust_run_btn" class="run-btn">运行</button>
             </div>
         </div>
         <div class="operations">
             <button id="transcode_btn">转译</button>
-            <button id="compile_verify_btn"><del>编译/校验</del></button>
-            <button id="sample_btn">展示示例</button>
+            <div>
+                示例：
+                <select id="sample_select">
+                    <option value="hello">hello</option>
+                    <option value="add">add</option>
+                </select>
+            </div>
+            &nbsp;
             <div>
                 转译工具：
                 <select id="tool_select">
@@ -51,6 +61,6 @@
             </div>
         </div>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 </html>
