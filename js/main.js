@@ -64,6 +64,14 @@ const rust_output = document.querySelector('#rust_output');
 
 
 (function init() {
+    let options = '';
+
+    for (const sample in c_sample) {
+        options += `<option value="${sample}">${sample}</option>`;
+    }
+    
+    sample_select.innerHTML = options;
+
     window.editor_c.setValue(c_sample.hello);
 })()
 
