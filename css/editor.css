@@ -40,6 +40,8 @@
     box-shadow: 0 0 6px rgb(62, 64, 74);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
+
+    display: none;
 }
 
 .editors .editor-head {
