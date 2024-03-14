@@ -65,11 +65,11 @@ struct MyStruct
     int value;
     MyStruct(int v) : value(v)
     {
-        std::cout << "Constructor\n";
+        std::cout << "Constructor\\n";
     }
     ~MyStruct()
     {
-        std::cout << "Destructor\n";
+        std::cout << "Destructor\\n";
     }
 };
 int main()
@@ -79,45 +79,10 @@ int main()
     if (auto shared_ptr = weak_ptr.lock())
     {                           // 尝试获取共享指针
         shared_ptr->value = 20; // 修改数据
-        std::cout << "Value: " << shared_ptr->value << "\n";
+        std::cout << "Value: " << shared_ptr->value << "\\n";
     }
     return 0;
-}
-
-/** rust
-
-use std::rc::Rc;
-use std::rc::Weak;
-
-struct MyStruct {
-    value: i32,
-}
-
-impl MyStruct {
-    fn new(v: i32) -> Self {
-        println!("Constructor");
-        MyStruct { value: v }
-    }
-}
-
-impl Drop for MyStruct {
-    fn drop(&mut self) {
-        println!("Destructor");
-    }
-}
-
-fn main() {
-    let ptr = Rc::new(MyStruct::new(10));
-    let weak_ptr = Rc::downgrade(&ptr); // 创建弱指针
-
-    if let Some(shared_ptr) = weak_ptr.upgrade() {
-        shared_ptr.value = 20; // 修改数据
-        println!("Value: {}", shared_ptr.value);
-    }
-}
-
-
-*/`,
+}`,
     macro: `#define CPPMAX(x,y) ((x)+(y) < 5?y:x)`,
     args: `#include <iostream>
 #include <cstdarg>
@@ -128,7 +93,7 @@ void print_values(int n, ...)
     for (int i = 0; i < n; i++)
     {
         int value = va_arg(vl, int);
-        std::cout << "Value: " << value << "\n";
+        std::cout << "Value: " << value << "\\n";
     }
     va_end(vl);
 }
