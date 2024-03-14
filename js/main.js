@@ -1,7 +1,7 @@
 import c_sample from "./c_sample.js";
 
 // const API = "";
-const API = "https://api.rustedu.com/";
+const API = "https://dev.opencamp.cn/c2rust";
 
 function setNewEditor(language, selector, val='') {
     const elem = document.querySelector(selector);
