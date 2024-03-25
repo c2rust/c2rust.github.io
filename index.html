@@ -1,63 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C2Rust</title>
-    <!-- CodeMirror主文件 -->
-    <link rel="stylesheet" href="/lib/codemirror-5.59.1/lib/codemirror.css">
-    <script src="/lib/codemirror-5.59.1/lib/codemirror.js"></script>
-    <script src="/lib/codemirror-5.59.1/addon/mode/simple.js"></script>
-    <!-- 滚动条 -->
-    <link rel="stylesheet" href="/lib/codemirror-5.59.1/addon/scroll/simplescrollbars.css">
-    <script src="/lib/codemirror-5.59.1/addon/scroll/simplescrollbars.js"></script>
-    <script src="/lib/codemirror-5.59.1/addon/scroll/annotatescrollbar.js"></script>
-    <!-- 主题样式 -->
-    <link rel="stylesheet" href="/lib/codemirror-5.59.1/theme/dracula.css">
-    <!-- 代码样式 -->
-    <script src="/lib/codemirror-5.59.1/mode/clike/clike.js"></script>
-    <script src="/lib/codemirror-5.59.1/mode/rust/rust.js"></script>
-    <!-- 闭合括号 -->
-    <script src="/lib/codemirror-5.59.1/addon/edit/closebrackets.js"></script>
-    <!-- 当前行高亮显示 -->
-    <script src="/lib/codemirror-5.59.1/addon/selection/active-line.js"></script>
-    <!-- 自定义样式 -->
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/editor.css">
-    <link rel="stylesheet" href="/css/operations.css">
-</head>
-<body>
-    <div class="main-wrap">
-        <div class="editors">
-            <div class="left-editor">
-                <div class="editor-head">C source code</div>
-                <textarea name="textarea_c" id="textarea_c" cols="30" rows="10"></textarea>
-                <div id="c_output" class="output"></div>
-                <button id="c_run_btn" class="run-btn">运行</button>
-            </div>
-            <div class="right-editor">
-                <div class="editor-head">Generated Rust source code</div>
-                <textarea name="textarea_rust" id="textarea_rust" cols="30" rows="10"></textarea>
-                <div id="rust_output" class="output"></div>
-                <button id="rust_run_btn" class="run-btn">运行</button>
-            </div>
-        </div>
-        <div class="operations">
-            <button id="transcode_btn">转译</button>
-            <div>
-                示例：
-                <select id="sample_select"></select>
-            </div>
-            &nbsp;
-            <div>
-                转译工具：
-                <select id="tool_select">
-                    <option value="chatglm">智谱AI</option>
-                    <option value="c2rust">C2Rust</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <script src="/js/main.js" type="module"></script>
-</body>
+    <script type="module" crossorigin src="/assets/index-DFmfCuys.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/@vue-CaA77chp.js">
+    <link rel="modulepreload" crossorigin href="/assets/@lezer-BKVAMdCn.js">
+    <link rel="modulepreload" crossorigin href="/assets/crelt-C8TCjufn.js">
+    <link rel="modulepreload" crossorigin href="/assets/style-mod-Bc2inJdb.js">
+    <link rel="modulepreload" crossorigin href="/assets/w3c-keyname-Vcq4gwWv.js">
+    <link rel="modulepreload" crossorigin href="/assets/@codemirror-I-DanHR-.js">
+    <link rel="modulepreload" crossorigin href="/assets/codemirror-yz77EbLa.js">
+    <link rel="modulepreload" crossorigin href="/assets/@babel-CCbyfPlC.js">
+    <link rel="modulepreload" crossorigin href="/assets/@uiw-CLhxolpj.js">
+    <link rel="modulepreload" crossorigin href="/assets/mitt-DJ65BbbF.js">
+    <link rel="modulepreload" crossorigin href="/assets/uuid-D8aEg3BZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash-es-BcjJjR9F.js">
+    <link rel="modulepreload" crossorigin href="/assets/@element-plus-BXVs1juE.js">
+    <link rel="modulepreload" crossorigin href="/assets/@vueuse-CjgnB8XA.js">
+    <link rel="modulepreload" crossorigin href="/assets/element-plus-D4yYKw6d.js">
+    <link rel="stylesheet" crossorigin href="/assets/element-plus-BiqWObBm.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-CWIJKffK.css">
+  </head>
+  <body style="width: 100%; height: 100%;">
+    <div id="app"></div>
+  </body>
 </html>
